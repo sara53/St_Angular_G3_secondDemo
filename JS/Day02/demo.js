@@ -291,3 +291,6 @@
    [3, 5, 7, 10, 20][(20, 10, 7, 5, 3)];
 
  */
+for (var i = 1; i <= 6; i++) {
+	document.writeln("<h " + i + "Wellcome" + "> Your namr</h" + i + ">");
+}
