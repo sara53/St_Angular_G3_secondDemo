@@ -259,3 +259,9 @@
 // });
 
 // console.log(result);
+
+// var a = 3;
+// var b = 4;
+
+// a = 4;
+// b = 3;
