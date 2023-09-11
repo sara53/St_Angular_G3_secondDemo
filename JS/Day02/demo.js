@@ -292,5 +292,5 @@
 
  */
 // for (var i = 1; i <= 6; i++) {
-// 	document.writeln("<h " + i + "Wellcome" + "> Your namr</h" + i + ">");
+// 	document.writeln("<h " + i + "Welcome" + "> Your namr</h" + i + ">");
 // }

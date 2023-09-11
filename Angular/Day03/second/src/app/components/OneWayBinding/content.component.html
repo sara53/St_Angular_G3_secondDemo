@@ -1,0 +1,10 @@
+<div class="bg-light p-5 text-center">
+  <h3>{{ flag ? "Content Component" : "Login Component" }}</h3>
+  <!-- <img src="assets/imgs/{{ imgSrc }}" alt="" /> -->
+  <!-- <img [src]="imgSrc2" alt="" /> -->
+  <img [src]="imgSrc" alt="" />
+  <p class="lead fs-3">
+    {{ componentTitle }}
+  </p>
+  <button (click)="nextImage()" class="btn btn-dark">next image</button>
+</div>

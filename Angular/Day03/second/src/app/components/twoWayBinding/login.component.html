@@ -1,0 +1,34 @@
+<div class="alert alert-dark text-center">
+  <div class="container">
+    <div class="row">
+      <form (submit)="login($event)">
+        <input
+          name="studentName"
+          [(ngModel)]="studentName"
+          value=""
+          type="text"
+          class="form-control mb-3"
+          placeholder="Enter Your Student Name"
+        />
+        <input
+          value=""
+          name="studentAge"
+          [(ngModel)]="studentAge"
+          type="text"
+          class="form-control"
+          placeholder="Enter Your Student Age"
+        />
+        <select name="courses" [(ngModel)]="selectedCourse">
+          <option>Html</option>
+          <option>Css</option>
+          <option>JS</option>
+        </select>
+        <p class="text-dark lead fs-1">
+          Your Fav Course is : {{ selectedCourse }}
+        </p>
+        <br />
+        <button type="submit" class="btn btn-success mt-4">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

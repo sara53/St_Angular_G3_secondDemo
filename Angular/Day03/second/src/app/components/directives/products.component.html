@@ -1,0 +1,73 @@
+<div class="alert alert-info text-center">
+  <h2 *ngIf="flag; else ourDiv" class="bg-light p-2 rounded">Our Products</h2>
+  <ng-template #ourDiv>
+    <h2>Else Block</h2>
+  </ng-template>
+  <button class="btn btn-primary" (click)="toggle()">Toggle</button>
+  <!-- <h2 *ngIf="!flag" class="bg-dark text-light p-2 rounded">Our Content</h2> -->
+  <div class="container">
+    <div class="row">
+      <!-- <app-product-item *ngFor="let x of ['mona', 'ali']"></app-product-item> -->
+      <!-- <div
+        *ngFor="let section of itiTracks; let i = index"
+        class="col-10 customBG text-light m-3 p-2 rounded"
+      >
+        <h4 class="mb-2">Section {{ i + 1 }}</h4>
+        <p class="bg-light text-dark p-1 lead rounded">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam,
+          nam.
+        </p>
+        <p class="lead fs-3 text-warning">{{ section }}</p>
+      </div> -->
+      <!-- <div [ngSwitch]="color" class="customBG p-3 text-center rounded">
+        <h1 class="text-light mb-4">Fav Colors</h1>
+        <p *ngSwitchCase="'green'" class="bg-success rounded text-light p-1">
+          Your Fav Color is : Green
+        </p>
+        <p *ngSwitchCase="'red'" class="bg-danger rounded text-light p-1">
+          Your Fav Color is : Red
+        </p>
+        <p *ngSwitchCase="'orange'" class="bg-warning rounded text-light p-1">
+          Your Fav Color is : Orange
+        </p>
+        <p *ngSwitchDefault class="bg-dark rounded text-light p-1">
+          You don't have any fav color
+        </p>
+      </div> -->
+      <!-- 
+      <p
+        [ngClass]="{
+          bg1: flag,
+          bg2: !flag
+        }"
+        class="p-3 rounded text-light mt-3"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, cum
+        incidunt repellat quaerat, nemo soluta molestiae animi laudantium vero
+        consectetur fugiat illum? Cumque perspiciatis eaque laudantium,
+        perferendis nemo accusamus pariatur?
+      </p> -->
+      <!-- <p
+        [style.backgroundColor]="flag ? 'red' : 'green'"
+        class="p-3 rounded text-light mt-3"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, cum
+        incidunt repellat quaerat, nemo soluta molestiae animi laudantium vero
+        consectetur fugiat illum? Cumque perspiciatis eaque laudantium,
+        perferendis nemo accusamus pariatur?
+      </p> -->
+      <p
+        [ngStyle]="{
+          backgroundColor: flag ? 'red' : 'green',
+          padding: flag ? '30px' : '10px'
+        }"
+        class="p-3 rounded text-light mt-3"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, cum
+        incidunt repellat quaerat, nemo soluta molestiae animi laudantium vero
+        consectetur fugiat illum? Cumque perspiciatis eaque laudantium,
+        perferendis nemo accusamus pariatur?
+      </p>
+    </div>
+  </div>
+</div>
