@@ -1,0 +1,16 @@
+<div class="customBg p-5 text-light">
+  <div class="container">
+    <h1 class="text-center">All Users</h1>
+    <div
+      *ngFor="let user of usersList"
+      class="bg-light text-dark p-3 rounded mt-3"
+    >
+      <h2>{{ user.id }} : Name: {{ user.name }}</h2>
+      <p>Email : {{ user.email }}</p>
+      <p>Website : {{ user.website }}</p>
+      <a class="btn btn-dark" [routerLink]="['/users', user.id]"
+        >Show User Detail</a
+      >
+    </div>
+  </div>
+</div>

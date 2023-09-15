@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "Book",
+      "price": 300
+    },
+    {
+      "productName": "Watch3 ttt",
+      "price": 200,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "productName": "phone",
+      "price": 1000
+    },
+    {
+      "productName": "laptop",
+      "price": "4000",
+      "id": 4
+    },
+    {
+      "productName": "orange juice",
+      "price": "1000",
+      "id": 5
+    },
+    {
+      "productName": "eeee",
+      "price": "44",
+      "id": 6
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+<div class="customBg p-5 text-light text-center">
+  <h2>All Products</h2>
+  <table class="table mt-5">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Product Price</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <th scope="row">{{ product.id }}</th>
+        <td>{{ product.productName }}</td>
+        <td>{{ product.price }}</td>
+        <td>
+          <a
+            class="btn btn-warning mx-2"
+            [routerLink]="['/products', product.id]"
+            >View Product
+          </a>
+          <a
+            class="btn btn-info mx-2"
+            [routerLink]="['/products', product.id, 'edit']"
+            >Edit Product
+          </a>
+          <a class="btn btn-danger mx-2" (click)="deleteMyProduct(product.id)"
+            >Delete Product
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
