@@ -1,2 +1,37 @@
-<app-header></app-header> <app-slider></app-slider>
-<app-products></app-products>
+<!-- <app-header (onSelectedPage)="showSelectedComponent($event)"></app-header> -->
+<app-navbar></app-navbar>
+<!-- <router-outlet></router-outlet> -->
+
+<ng-template>
+  <!-- i set ng-template her just for hidding these components rather than comment them -->
+  <app-slider *ngIf="page == 'Gallary'"></app-slider>
+  <app-login
+    (onLogin)="login()"
+    *ngIf="page == 'Login'"
+    [serverName]="resetServerNameValue"
+  ></app-login>
+  <button class="btn btn-primary" (click)="resetServer()">
+    Reset Server Name
+  </button>
+  <div *ngIf="page == 'Home'" class="mt-5 mainBG p-5">
+    <h1>Hello Home Page</h1>
+  </div>
+</ng-template>
+<ng-template>
+  <app-products>
+    <button class="btn btn-warning">Show more</button>
+    <input
+      #contentInput
+      type="text"
+      class="form-control mt-5"
+      value="Test Value"
+    />
+  </app-products>
+  <app-products>
+    <div>
+      <h1>Hello Mearn Track</h1>
+    </div>
+  </app-products>
+</ng-template>
+<router-outlet></router-outlet>
+<app-footer *ngIf="router.url !== '/'"></app-footer>

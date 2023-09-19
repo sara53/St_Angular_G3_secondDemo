@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-10">
+      <form class="row g-3" (submit)="login($event)">
+        <div class="col-2"></div>
+        <div class="col-md-8">
+          <label for="validationServer01" class="form-label">First name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationServer01"
+            value=""
+            placeholder="Enter Your First Name"
+            name="firstname"
+            [ngClass]="{
+              'is-valid': isFirstNameValid,
+              'is-invalid': !isFirstNameValid && !isFirstNameEmpty
+            }"
+            [(ngModel)]="firstName"
+          />
+          <div class="invalid-feedback">Name Must be greater than 3</div>
+          <div class="valid-feedback">Good job</div>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-2"></div>
+
+        <div class="col-md-8">
+          <label for="validationServer02" class="form-label">Last name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="validationServer02"
+            value=""
+            name="lastName"
+            [(ngModel)]="lastName"
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-2"></div>
+
+        <div class="col-12 d-flex justify-content-around">
+          {{ errorMsg }}
+          <button class="btn btn-dark" type="submit">Login Now</button>
+        </div>
+        <h1 *ngIf="prevName" class="">Previous Value is :{{ prevName }}</h1>
+        <p class="fs-4 position-relative border">
+          ServerName is : {{ serverName }}
+          <span
+            [ngClass]="{
+              'bg-warning': flag,
+              'bg-success': !flag
+            }"
+            class="position-absolute top-0 start-100 translate-middle p-2 border border-light rounded-circle"
+          >
+            <span class="visually-hidden">New alerts</span>
+          </span>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

@@ -2,11 +2,27 @@
   <h2>Our Products</h2>
   <div class="container">
     <div class="row">
-      <app-products-item class="col-sm-3"></app-products-item>
-      <app-products-item class="col-sm-3" />
-      <app-products-item class="col-sm-3" />
-      <app-products-item class="col-sm-3" />
-      <app-products-item class="col-sm-3" />
+      <!-- <input
+        #myCard
+        type="text"
+        placeholder="Enter a Card Name"
+        class="form-control"
+      />
+      <button class="btn btn-success mt-5" (click)="addNewCard()">
+        Add New Element
+      </button> -->
+
+      <div class="row mt-5">
+        <div class="col-3 mb-3" *ngFor="let track of tracks">
+          <div class="card">
+            <div class="card-header">{{ track.trackName }}</div>
+            <div class="card-body text-left">
+              <p class="">Welcome {{ track }} from ITI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-content></ng-content>
     </div>
   </div>
 </div>
